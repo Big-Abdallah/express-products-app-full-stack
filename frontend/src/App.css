@@ -1,0 +1,240 @@
+:root {
+  --bg: #F5F5F0;
+  --surface: #FFFFFF;
+  --primary: #0A84FF;
+  --text: #1C1C1E;
+  --text-muted: #6E6E73;
+  --border: #E3E3DE;
+  --danger: #E5484D;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  margin: 0;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 28px;
+}
+
+.error {
+  color: var(--danger);
+  background: #FCEBEB;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* ===== Search bar ===== */
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  font-size: 14px;
+  color: var(--text);
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.15);
+}
+
+/* ===== Form ===== */
+.product-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 36px;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.product-form h2 {
+  width: 100%;
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.product-form input {
+  flex: 1;
+  min-width: 160px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+  font-size: 14px;
+  color: var(--text);
+}
+
+.product-form input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.15);
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.product-form button[type="submit"] {
+  background: var(--primary);
+  color: white;
+}
+
+.product-form button[type="button"] {
+  background: var(--bg);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+/* ===== Empty state ===== */
+.empty-state {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 40px 0;
+}
+
+/* ===== Card grid ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.product-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-id {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.stock-badge {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary);
+  background: rgba(10, 132, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.stock-badge.out {
+  color: var(--danger);
+  background: #FCEBEB;
+}
+
+.card-name {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.card-description {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.card-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-secondary {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 7px 12px;
+  font-size: 13px;
+}
+
+.btn-danger {
+  background: transparent;
+  color: var(--danger);
+  padding: 7px 12px;
+  font-size: 13px;
+}

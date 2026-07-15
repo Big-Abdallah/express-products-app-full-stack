@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pro": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "backend",
+    "nodejs",
+    "express"
+  ],
+  "author": "Abdallah Mohamed < swe.abdallah.m@icloud.com >",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
